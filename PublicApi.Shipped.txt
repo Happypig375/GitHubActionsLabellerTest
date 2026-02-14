@@ -1,0 +1,5 @@
+#nullable enable
+MyNamespace.MyClass
+MyNamespace.MyClass.MyClass() -> void
+MyNamespace.MyClass.PublicMethod(string! text) -> void
+MyNamespace.MyClass.PublicProperty.get -> string!
