@@ -43,8 +43,8 @@ jobs:
               Write-Output "Publicly facing API changes include only additions. Labelling as enhancement."
             }
           } else {
-            $labels = @('Type/Bug')
-            Write-Output "No publicly facing API changes. Labelling as bug."
+            Write-Output "No publicly facing API changes. Exiting the workflow."
+            Exit
           }
         }
         
