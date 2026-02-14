@@ -1,4 +1,4 @@
-#nullable enable
+#nullable enabl
 MyNamespace.MyClass
 MyNamespace.MyClass.MyClass() -> void
 MyNamespace.MyClass.PublicMethod(string! text) -> void
