@@ -53,3 +53,14 @@ Example breaking change:
 - `.github/workflows/Label.yml`: The workflow that performs automatic labeling
 - `PublicApi.Shipped.txt`: Contains the public API surface that has been released
 - `PublicApi.Unshipped.txt`: Contains upcoming public API changes that haven't been released yet
+
+## Security Considerations
+
+This workflow uses `pull_request_target` which runs with elevated privileges (write access to pull requests). It checks out the PR code to analyze changes using git diff. While CodeQL may flag this pattern as potentially risky, the security impact is mitigated because:
+
+- The workflow only runs read-only git commands (`git diff`) on the checked-out code
+- No code from the PR is executed
+- All scripts are inline PowerShell that don't execute files from the checkout
+- The workflow only adds labels using the GitHub API with a restricted token
+
+This is the standard pattern used in the original [CSharpMath repository](https://github.com/hflexgrig/CSharpMath) for automated API change detection and labeling.
