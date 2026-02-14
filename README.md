@@ -1,6 +1,6 @@
 # GitHubActionsLabellerTest
 
-This repository demonstrates the Label workflow from [CSharpMath](https://github.com/hflexgrig/CSharpMath) that automatically labels pull requests based on public API changes.
+This repository demonstrates the Label workflow from [CSharpMath](https://github.com/verybadcat/CSharpMath) that automatically labels pull requests based on public API changes.
 
 ## Workflow Overview
 
@@ -63,4 +63,4 @@ This workflow uses `pull_request_target` which runs with elevated privileges (wr
 - All scripts are inline PowerShell that don't execute files from the checkout
 - The workflow only adds labels using the GitHub API with a restricted token
 
-This is the standard pattern used in the original [CSharpMath repository](https://github.com/hflexgrig/CSharpMath) for automated API change detection and labeling.
+This is the standard pattern used in the original [CSharpMath repository](https://github.com/verybadcat/CSharpMath) for automated API change detection and labeling.
