@@ -25,7 +25,7 @@ jobs:
       run: |
         if ("${{ github.head_ref }}" -eq "action/ship-publicapi") {
           $labels = @('Type/Housekeeping')
-          Write-Output "This is a ship-publicapi PR, labeling as Type/Maintenance"
+          Write-Output "This is a ship-publicapi PR, labeling as Type/Housekeeping"
         } else {
           # For regular PRs, check for API changes
           $changes = git diff origin/${{ github.base_ref }}...HEAD -- '**/PublicApi.Unshipped.txt'
